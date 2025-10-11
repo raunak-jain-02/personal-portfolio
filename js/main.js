@@ -68,7 +68,9 @@ document.addEventListener('DOMContentLoaded', function(){
     const phrases = [
       "Web Developer",
       "Python Enthusiast",
-      "Student"
+      "Cybersecurity Learner",
+      "Open Source Contributor",
+      "Student" 
     ];
     let phraseIndex = 0;
 
