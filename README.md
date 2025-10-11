@@ -1,3 +1,4 @@
+# This is a Sample README for now.
 Raunak Jain — Portfolio
 
 This is a small static portfolio built with HTML, CSS and vanilla JavaScript. It's designed to be easy to edit and deploy.
