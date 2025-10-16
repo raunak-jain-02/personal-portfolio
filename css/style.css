@@ -458,3 +458,22 @@ body.light .card{box-shadow:0 6px 18px rgba(12,18,28,0.04)}
 @media (prefers-reduced-motion: reduce){
   .type-trigger::before{transition:none}
 }
+
+.edu-item p strong {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* Education Section Styling */
+.edu-item h4 {
+  color: var(--accent);   /* make the headings blue */
+  font-weight: 700;
+}
+.edu-item h4, .edu-item h5 {
+  margin: 0 0 6px;  /* spacing below headings */
+}
+
+/* optional small spacing tweak for clean layout */
+.edu-item p {
+  line-height: 1.6;
+}
