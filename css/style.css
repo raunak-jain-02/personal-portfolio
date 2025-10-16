@@ -477,3 +477,70 @@ body.light .card{box-shadow:0 6px 18px rgba(12,18,28,0.04)}
 .edu-item p {
   line-height: 1.6;
 }
+
+.qualifications ul {
+  list-style: none;         /* removes default bullets */
+  padding-left: 0;          /* aligns text nicely */
+}
+
+.qualifications li {
+  display: flex;            /* aligns icon and text on one line */
+  align-items: center;
+  gap: 8px;                 /* space between icon and text */
+  margin-bottom: 10px;
+}
+
+.qualifications [data-lucide] {
+  width: 20px;
+  height: 20px;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.glow-icon {
+  color: #60a5fa; /* match your site accent color */
+  filter: drop-shadow(0 0 4px #60a5fa) drop-shadow(0 0 8px #60a5fa);
+  transition: transform 0.2s, filter 0.2s;
+}
+
+.glow-icon:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 6px #60a5fa) drop-shadow(0 0 12px #60a5fa);
+}
+
+
+/* in your style.css */
+.edu-item.card {
+  min-height: 140px; /* adjust as needed */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.icon-container .lucide {
+  margin-right: 8px; /* Adds space to the right of each icon */
+}
+
+.muted {
+  margin-top: 20px; /* Adjust this value for more or less space */
+}
+
+.socials {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.icon-btn i {
+  width: 32px;
+  height: 32px;
+  color: #60a5fa; /* primary accent */
+  transition: transform 0.2s;
+}
+
+.icon-btn:hover i {
+  transform: scale(1.2);
+  color: #3b82f6; /* hover color */
+}
+

@@ -6,6 +6,7 @@
   <title>Raunak Jain — Web Developer</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <script src="https://unpkg.com/lucide@latest"></script>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
@@ -45,9 +46,14 @@
           <h3>Raunak Jain</h3>
           <p class="muted">Student • Web Developer • Python </p>
           <div class="socials">
-            <a href="https://github.com/raunak-jain-02" target="_blank" rel="noreferrer">GitHub</a>
-            <a href="https://www.linkedin.com/in/raunak-jain-ba2a4920a/" target="_blank" rel="noreferrer">LinkedIn</a>
-            <a href="https://x.com/raunak_jain_02" target="_blank" rel="noreferrer">X</a>
+            <a href="https://github.com/raunak-jain-02" target="_blank" rel="noreferrer" class="icon-btn">
+              <i data-lucide="github" class="glow-icon"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/raunak-jain-ba2a4920a/" target="_blank" rel="noreferrer" class="icon-btn">
+              <i data-lucide="linkedin" class="glow-icon"></i>
+            </a>
+            <a href="https://x.com/raunak_jain_02" target="_blank" rel="noreferrer" class="icon-btn">
+              <i data-lucide="twitter" class="glow-icon"></i></a>
           </div>
         </aside>
       </div>
@@ -149,7 +155,10 @@
   <div class="education-list">
 
     <div class="edu-item card" data-reveal>
-      <h4>Secondary School - Certification</h4>
+      <h4 class="flex items-center gap-2"> 
+        <i data-lucide="book"  style="height:1.2em; width:1.2em; display:inline-block; vertical-align:middle;"  ></i>
+        Secondary School - Certification
+      </h4>
       <p class="muted">
         Bal Bharati Public School, Ganga Ram Hospital Marg, New Delhi - Class 10 (2023)  
         <br><strong>Score:</strong> 91%
@@ -157,7 +166,10 @@
     </div>
 
     <div class="edu-item card" data-reveal>
-      <h4>High School - Science Stream</h4>
+      <h4 class="flex items-center gap-2"> 
+        <i data-lucide="book-open"  style="height:1.2em; width:1.2em; display:inline-block; vertical-align:middle;"></i>
+        High School - Science Stream
+      </h4>
       <p class="muted">
         Bal Bharati Public School, Ganga Ram Hospital Marg, New Delhi - Class 12 (2025)  
         <br><strong>Score:</strong> 73%
@@ -165,9 +177,12 @@
     </div>
 
     <div class="edu-item card" data-reveal>
-      <h4>Bachelor of Technology — Computer Science (Cyber Security)</h4>
+      <h4 class="flex items-center gap-2">
+        <i data-lucide="university"  style="height:1.2em; width:1.2em; display:inline-block; vertical-align:middle;"></i>
+        Bachelor of Technology — Computer Science (Cyber Security)
+      </h4>
       <p class="muted">
-        Vellore Institute of Technology - Present
+         Vellore Institute of Technology - Present
       </p>
     </div>
 
@@ -175,50 +190,102 @@
 </section>
 
 
-    <section class="qualifications container" id="qualifications">
-      <h2 class="type-trigger" data-text="Qualifications" tabindex="0"><span class="type-text">Qualifications</span></h2>
-      <div class="card" data-reveal>
-        <ul class="qual-list">
-          <li>Strong fundamentals in data structures and algorithms</li>
-          <li>Experience with Python scripting and small web apps</li>
-          <li>Familiarity with SQL and basic database design</li>
-          <li>Comfortable with Git, CLI, and modern dev workflows</li>
-        </ul>
-      </div>
-    </section>
+<section class="qualifications container" id="qualifications">
+  <h2 class="type-trigger" data-text="Qualifications" tabindex="0">
+    <span class="type-text">Qualifications</span>
+  </h2>
+
+  <div class="education-list"> <!-- reuse your edu-item styling -->
+
+    <!-- Programming Skills -->
+    <div class="edu-item card min-h-[140px] flex flex-col justify-between" data-reveal>
+      <h4 class="flex items-center gap-2">
+        <i data-lucide="code-2" class="glow-icon" style="height:1.2em; width:1.2em; display:inline-block; vertical-align:middle;"></i>
+        Programming Skills
+      </h4>
+      <p class="muted">
+        Python, SQL, Flask, HTML/CSS, JavaScript
+      </p>
+
+    </div>
+
+    <!-- Cybersecurity Knowledge -->
+    <div class="edu-item card min-h-[140px] flex flex-col justify-between" data-reveal>
+      <h4 class="flex items-center gap-2">
+        <i data-lucide="shield" class="glow-icon" style="height:1.2em; width:1.2em; display:inline-block; vertical-align:middle;"></i>
+        Cybersecurity Knowledge
+      </h4>
+      <p class="muted">
+         Ethical hacking basics, OWASP, Cryptography fundamentals
+      </p>
+    </div>
+
+    <!-- Certifications & Training -->
+    <div class="edu-item card min-h-[140px] flex flex-col justify-between" data-reveal>
+      <h4 class="flex items-center gap-2">
+        <i data-lucide="award" class="glow-icon" style="height:1.2em; width:1.2em; display:inline-block; vertical-align:middle;"></i>
+        Certifications & Training
+      </h4>
+      <p class="muted">
+         CEH (Certified Ethical Hacker), Workshops on ML & Security
+      </p>
+    </div>
+
+    <!-- Tools & Workflow -->
+    <div class="edu-item card min-h-[140px] flex flex-col justify-between" data-reveal>
+      <h4 class="flex items-center gap-2">
+        <i data-lucide="git-branch" class="glow-icon" style="height:1.2em; width:1.2em; display:inline-block; vertical-align:middle;"></i>
+        Tools & Workflow
+      </h4>
+      <p class="muted">
+         Skilled with Git, VS Code, and modern workflows
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
 
     <section class="projects container" id="projects">
       <h2 class="type-trigger" data-text="Projects" tabindex="0"><span class="type-text">Projects</span></h2>
       <div class="projects-grid">
         <article class="project-card" data-reveal>
-          <h3>AgroAI</h3>
+          <h3 class="flex items-center gap-2">
+            <i data-lucide="tractor"  style="height:1.2em; width:1.2em; display:inline-block; vertical-align:middle;"></i>
+            AgroAI</h3>
           <p class="muted">Plant disease detection using a lightweight CNN. Built an upload UI, integrated model inference and optimized for mobile imagery. Deployed on Vercel.</p>
           <p><strong>Tech:</strong> Python, Flask, TensorFlow Lite, HTML/CSS, JS</p>
           <a class="project-link" href="http://agro-ai-final.vercel.app/" target="_blank" rel="noreferrer">View project</a>
         </article>
 
         <article class="project-card" data-reveal>
-          <h3>ClinIQ</h3>
+          <h3 class="flex items-center gap-2">
+            <i data-lucide="heart-plus"  style="height:1.2em; width:1.2em; display:inline-block; vertical-align:middle;"></i>
+            ClinIQ
+          </h3>
           <p class="muted">ClinIQ is an innovative full-stack healthtech platform that leverages AI to provide accurate symptom analysis, doctor discovery - all in one place.</p>
           <p><strong>Tech:</strong> React.js, TailwindCSS, Framer Motion , Supabase Database , Gemini API</p>
           <a class="project-link" href="https://clin-iq.vercel.app/" target="_blank" rel="noreferrer">Repository / Demo</a>
         </article>
 
-        <article class="project-card" data-reveal>
+        <!-- <article class="project-card" data-reveal>
           <h3>UI Clone — Dashboard</h3>
           <p class="muted">Practice clone of a modern analytics dashboard. Implemented responsive layout, interactive filters and static chart placeholders using vanilla JS.</p>
           <p><strong>Tech:</strong> HTML, CSS, JavaScript</p>
           <a class="project-link" href="#" target="_blank" rel="noreferrer">View demo</a>
-        </article>
+        </article> -->
       </div>
     </section>
 
-    <section class="contact container" id="contact">
-      <h2>Contact</h2>
-      <p>If you'd like to collaborate or hire me, send an email or reach out on LinkedIn.</p>
-      <a class="btn primary" href="mailto:raunakjain1002@gmail.com">Email me</a>
-    </section>
-  </main>
+  <section class="contact container" id="contact">
+  <h2>Contact</h2>
+  <p>If you'd like to collaborate or hire me, send an email or reach out on LinkedIn.</p>
+  
+  <a class="btn primary contact-btn" href="mailto:raunakjain1002@gmail.com">
+    <i data-lucide="mail" style="height:1.2em; width:1.2em; display:inline-block; vertical-align:middle;"></i> Email me
+  </a>
+</section>
 
   <footer class="site-footer">
     <div class="container">
@@ -227,6 +294,10 @@
   </footer>
 
   <script src="js/main.js"></script>
+  <script>
+  lucide.createIcons();
+</script>
+
 
 </body>
 </html>
