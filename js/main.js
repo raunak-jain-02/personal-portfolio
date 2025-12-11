@@ -80,16 +80,50 @@ document.addEventListener('DOMContentLoaded', function () {
     setInterval(typePhrase, 4000);
   }
 
-  if (menuBtn && nav) {
-    menuBtn.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        nav.classList.toggle('show');
-      }
-      if (e.key === 'Escape') {
-        nav.classList.remove('show');
-        menuBtn.focus();
-      }
+
+
+  // Contact Form AJAX Submission
+  const contactForm = document.querySelector('.contact-form');
+  const successMessage = document.getElementById('successMessage');
+
+  if (contactForm && successMessage) {
+    contactForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const submitBtn = contactForm.querySelector('button[type="submit"]');
+      const originalBtnText = submitBtn.textContent;
+
+      submitBtn.textContent = 'Sending...';
+      submitBtn.disabled = true;
+
+      const formData = new FormData(contactForm);
+      const object = Object.fromEntries(formData);
+      const json = JSON.stringify(object);
+
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: json
+      })
+        .then(async (response) => {
+          if (response.status === 200) {
+            contactForm.style.display = 'none';
+            successMessage.style.display = 'block';
+          } else {
+            console.log(response);
+            submitBtn.textContent = originalBtnText;
+            submitBtn.disabled = false;
+            alert('Something went wrong. Please try again later.');
+          }
+        })
+        .catch(error => {
+          console.log(error);
+          submitBtn.textContent = originalBtnText;
+          submitBtn.disabled = false;
+          alert('Something went wrong. Please try again later.');
+        });
     });
   }
 })

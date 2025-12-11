@@ -11,7 +11,7 @@ camera.position.setZ(30);
 
 // Create Stars
 const geometry = new THREE.BufferGeometry();
-const count = 1500;
+const count = 800; // Less clutter (was 1500)
 const posArray = new Float32Array(count * 3);
 
 for (let i = 0; i < count * 3; i++) {
@@ -24,7 +24,7 @@ const material = new THREE.PointsMaterial({
     size: 0.05,
     color: 0x60a5fa, // Match accent color
     transparent: true,
-    opacity: 0.8,
+    opacity: 0.5, // Fainter stars (was 0.8)
 });
 
 const starsMesh = new THREE.Points(geometry, material);
@@ -58,8 +58,8 @@ document.addEventListener('mousemove', (event) => {
 function animate() {
     requestAnimationFrame(animate);
 
-    starsMesh.rotation.y += 0.0005;
-    starsMesh.rotation.x += 0.0002;
+    starsMesh.rotation.y += 0.0003; // Slower (was 0.0005)
+    starsMesh.rotation.x += 0.0001; // Slower (was 0.0002)
 
     sphere.rotation.x += 0.001;
     sphere.rotation.y += 0.001;
@@ -100,3 +100,46 @@ window.addEventListener('resize', () => {
     camera.updateProjectionMatrix();
     renderer.setSize(window.innerWidth, window.innerHeight);
 });
+
+// Theme Handling
+function updateTheme() {
+    const isLight = document.body.classList.contains('light');
+    // Dark Mode: 0x60a5fa (Light Blue), Light Mode: 0x1e1b4b (Very Dark Indigo)
+    const targetColor = isLight ? 0x1e1b4b : 0x60a5fa;
+
+    material.color.setHex(targetColor);
+    material2.color.setHex(targetColor);
+
+    // Adjust visibility/opacity if needed
+    if (isLight) {
+        material.size = 0.07; // Slightly larger for visibility against white
+        material.opacity = 0.6;
+
+        // Make sphere darker and more visible
+        material2.color.setHex(0x312e81); // Darker Indigo (Indigo-900)
+        material2.opacity = 0.2; // Increased from default 0.05
+
+        scene.background = null; // Ensure transparent to let CSS gradient show
+    } else {
+        material.size = 0.05;
+        material.opacity = 0.5;
+
+        // Reset sphere for transparency in dark mode
+        material2.color.setHex(0x60a5fa);
+        material2.opacity = 0.05;
+    }
+}
+
+// Observe body class changes for theme toggle
+const themeObserver = new MutationObserver((mutations) => {
+    mutations.forEach((mutation) => {
+        if (mutation.attributeName === 'class') {
+            updateTheme();
+        }
+    });
+});
+
+themeObserver.observe(document.body, { attributes: true });
+
+// Initial check
+updateTheme();

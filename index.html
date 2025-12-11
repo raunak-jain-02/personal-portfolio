@@ -22,12 +22,21 @@
       <a class="logo" href="#">Raunak <span class="dot">.</span></a>
       <nav class="nav" id="nav" role="navigation" aria-label="Primary">
         <a href="#about">About</a>
+        <a href="#education">Education</a>
         <a href="#skills">Skills</a>
         <a href="#achievements">Achievements</a>
-        <a href="#education">Education</a>
+        <a href="#certifications">Certifications</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
       </nav>
+      <div class="header-actions">
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle Theme">
+          🌙
+        </button>
+        <button class="menu-btn" id="menuBtn" aria-label="Toggle Menu">
+          ☰
+        </button>
+      </div>
 
     </div>
   </header>
@@ -135,6 +144,10 @@
           <img src="assets/icons/crypt.svg" alt="Cryptography" class="skill-icon">
           <div class="skill-label">Cryptography Basics</div>
         </div>
+        <div class="skill">
+          <img src="assets/icons/vscode.svg" alt="VS Code" class="skill-icon">
+          <div class="skill-label">Visual Studio Code</div>
+        </div>
       </div>
     </section>
 
@@ -209,12 +222,55 @@
     </section>
 
 
-    <section class="qualifications container" id="qualifications">
-      <h2>Qualifications</h2>
+    <section class="certifications container" id="certifications">
+      <h2>Certifications</h2>
 
       <div class="education-list"> <!-- reuse your edu-item styling -->
 
-        <!-- Programming Skills -->
+        <!-- Certifications -->
+        <div class="achievement card" data-reveal>
+          <h4>CodeClash (Hackathon)</h4>
+          <p class="muted">Built ClinIQ that helps users to get Fast and Reliable access to Health Care.</p>
+          <a class="project-link"
+            href="https://drive.google.com/file/d/1HYardx3-i6kpBA_sxGbsXiNnwPAXLT0c/view?usp=sharing" target="_blank"
+            rel="noreferrer">View Certificate</a>
+        </div>
+        <div class="achievement card" data-reveal>
+          <h4>Google Agentic AI Day</h4>
+          <p class="muted">Attended Google Agentic AI Day.</p>
+          <a class="project-link"
+            href="https://drive.google.com/file/d/1n5aZZ7CXXRrArUKMyWS2iHSpHQR0t5eQ/view?usp=sharing" target="_blank"
+            rel="noreferrer">View Certificate</a>
+        </div>
+        <div class="achievement card" data-reveal>
+          <h4>Netwon School Data Analytics</h4>
+          <p class="muted">Learnt Data Analytics using Excel and Python.</p>
+          <a class="project-link"
+            href="https://drive.google.com/file/d/1EiE3G5krSls8WxAm6q-vDW3TGS5_O7Pc/view?usp=sharing" target="_blank"
+            rel="noreferrer">View Certificate</a>
+        </div>
+        <div class="achievement card" data-reveal>
+          <h4>Scaler School Of Technology(Internship)</h4>
+          <p class="muted">Done an Internship at Scaler School Of Technology.</p>
+          <a class="project-link"
+            href="https://drive.google.com/file/d/1R9-qIdb3LIRX_rbz_0KvGkrKfPc8D8XB/view?usp=sharing" target="_blank"
+            rel="noreferrer">View Certificate</a>
+        </div>
+        <div class="achievement card" data-reveal>
+          <h4>Amazon Web Services (AWS)</h4>
+          <p class="muted">Got the opportunity to attend the launch of the Amazon Q (a CLI Agent) at the AWS Office
+            (Gurgaon).</p>
+          <a class="project-link"
+            href="https://drive.google.com/file/d/1FVobwnASbb1CxIEXUEeoUf_ZzFnx9MCf/view?usp=sharing" target="_blank"
+            rel="noreferrer">View Certificate</a>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="qualifications container" id="qualifications">
+      <h2>Qualifications</h2>
+      <div class="education-list">
         <div class="edu-item card min-h-[140px] flex flex-col justify-between" data-reveal>
           <h4 class="flex items-center gap-2">
             <i data-lucide="code-2" class="glow-icon"
@@ -313,16 +369,41 @@
 
     <section class="contact container" id="contact">
       <h2>Contact</h2>
-      <p>If you'd like to collaborate or hire me, send an email or reach out on LinkedIn.</p>
+      <p>I'm always open to discussing new projects, creative ideas or opportunities to be part of your visions.</p>
 
-      <a class="btn primary contact-btn" href="mailto:raunakjain1002@gmail.com">
-        <i data-lucide="mail" style="height:1.2em; width:1.2em; display:inline-block; vertical-align:middle;"></i> Email
-        me
-      </a>
-      <a class="btn primary contact-btn" href="/myresume.pdf" download>
-        <button data-lucide="download"
-          style="height:1.2em; width:1.2em; display:inline-block; vertical-align:middle;"></button> Download Resume
-      </a>
+      <div class="contact-wrapper">
+        <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+          <input type="hidden" name="access_key" value="51fba185-2278-4886-888b-02cf8010e2cb">
+
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required placeholder="John Doe">
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required placeholder="john@example.com">
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required placeholder="Your message here..."></textarea>
+          </div>
+
+          <button type="submit" class="btn primary">Send Message</button>
+        </form>
+
+        <div id="successMessage" class="success-message" style="display: none;">
+          <div class="tick-icon">
+            <svg viewBox="0 0 52 52">
+              <circle class="checkmark-circle" cx="26" cy="26" r="25" fill="none" />
+              <path class="checkmark-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+            </svg>
+          </div>
+          <h3>Message Sent!</h3>
+          <p class="muted">Thanks for reaching out. I'll get back to you soon.</p>
+        </div>
+      </div>
 
     </section>
 
