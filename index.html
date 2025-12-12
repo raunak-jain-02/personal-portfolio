@@ -105,6 +105,48 @@
       </p>
     </section>
 
+    <section class="education container" id="education">
+      <h2>Education</h2>
+
+      <div class="education-list">
+
+        <div class="edu-item card" data-reveal>
+          <h4 class="flex items-center gap-2">
+            <i data-lucide="book" style="height:1.2em; width:1.2em; display:inline-block; vertical-align:middle;"></i>
+            Secondary School - Certification
+          </h4>
+          <p class="muted">
+            Bal Bharati Public School, Ganga Ram Hospital Marg, New Delhi - Class 10 (2023)
+            <br><strong>Score:</strong> 91%
+          </p>
+        </div>
+
+        <div class="edu-item card" data-reveal>
+          <h4 class="flex items-center gap-2">
+            <i data-lucide="book-open"
+              style="height:1.2em; width:1.2em; display:inline-block; vertical-align:middle;"></i>
+            High School - Science Stream
+          </h4>
+          <p class="muted">
+            Bal Bharati Public School, Ganga Ram Hospital Marg, New Delhi - Class 12 (2025)
+            <br><strong>Score:</strong> 73%
+          </p>
+        </div>
+
+        <div class="edu-item card" data-reveal>
+          <h4 class="flex items-center gap-2">
+            <i data-lucide="university"
+              style="height:1.2em; width:1.2em; display:inline-block; vertical-align:middle;"></i>
+            Bachelor of Technology — Computer Science (Cyber Security)
+          </h4>
+          <p class="muted">
+            Vellore Institute of Technology - Present
+          </p>
+        </div>
+
+      </div>
+    </section>
+
     <section class="skills container" id="skills">
       <h2>Skills</h2>
       <div class="skills-grid">
@@ -174,48 +216,6 @@
         <div class="achievement card" data-reveal>
           <h4>-</h4>
           <p class="muted">-</p>
-        </div>
-
-      </div>
-    </section>
-
-    <section class="education container" id="education">
-      <h2>Education</h2>
-
-      <div class="education-list">
-
-        <div class="edu-item card" data-reveal>
-          <h4 class="flex items-center gap-2">
-            <i data-lucide="book" style="height:1.2em; width:1.2em; display:inline-block; vertical-align:middle;"></i>
-            Secondary School - Certification
-          </h4>
-          <p class="muted">
-            Bal Bharati Public School, Ganga Ram Hospital Marg, New Delhi - Class 10 (2023)
-            <br><strong>Score:</strong> 91%
-          </p>
-        </div>
-
-        <div class="edu-item card" data-reveal>
-          <h4 class="flex items-center gap-2">
-            <i data-lucide="book-open"
-              style="height:1.2em; width:1.2em; display:inline-block; vertical-align:middle;"></i>
-            High School - Science Stream
-          </h4>
-          <p class="muted">
-            Bal Bharati Public School, Ganga Ram Hospital Marg, New Delhi - Class 12 (2025)
-            <br><strong>Score:</strong> 73%
-          </p>
-        </div>
-
-        <div class="edu-item card" data-reveal>
-          <h4 class="flex items-center gap-2">
-            <i data-lucide="university"
-              style="height:1.2em; width:1.2em; display:inline-block; vertical-align:middle;"></i>
-            Bachelor of Technology — Computer Science (Cyber Security)
-          </h4>
-          <p class="muted">
-            Vellore Institute of Technology - Present
-          </p>
         </div>
 
       </div>
@@ -377,12 +377,12 @@
 
           <div class="form-group">
             <label for="name">Name</label>
-            <input type="text" id="name" name="name" required placeholder="John Doe">
+            <input type="text" id="name" name="name" required placeholder="Enter the Name">
           </div>
 
           <div class="form-group">
             <label for="email">Email</label>
-            <input type="email" id="email" name="email" required placeholder="john@example.com">
+            <input type="email" id="email" name="email" required placeholder="Email Address Required">
           </div>
 
           <div class="form-group">
@@ -390,7 +390,13 @@
             <textarea id="message" name="message" rows="5" required placeholder="Your message here..."></textarea>
           </div>
 
-          <button type="submit" class="btn primary">Send Message</button>
+          <div class="form-actions">
+            <button type="submit" class="btn outline resume-btn" aria-label="Send Message" style="height:4em; width:15em; vertical-align:middle">Send Message</button>
+            <a href="/myresume.pdf" download class="btn outline resume-btn" aria-label="Download Resume">
+              <i data-lucide="download" style="height:1em; width:1em; vertical-align:middle;"></i>
+              Download Resume
+            </a>
+          </div>
         </form>
 
         <div id="successMessage" class="success-message" style="display: none;">
