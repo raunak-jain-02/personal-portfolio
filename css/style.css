@@ -154,6 +154,24 @@ body {
   letter-spacing: -0.3px
 }
 
+.typed {
+  color: var(--accent);
+  min-height: 1.2em;
+  display: inline-block;
+  position: relative;
+}
+
+.typed::after {
+  content: '|';
+  margin-left: 2px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
 .hero-text .lead {
   color: var(--muted);
   margin: 0 0 20px;

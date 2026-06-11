@@ -65,19 +65,36 @@ document.addEventListener('DOMContentLoaded', function () {
       "Student"
     ];
     let phraseIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    let typeSpeed = 100;
 
-    function typePhrase() {
-      typedText.textContent = "";
-      typedText.style.width = "0";
-      typedText.classList.remove('typed');
-      void typedText.offsetWidth;
-      typedText.classList.add('typed');
-      typedText.textContent = phrases[phraseIndex];
-      phraseIndex = (phraseIndex + 1) % phrases.length;
+    function type() {
+      const currentPhrase = phrases[phraseIndex];
+      
+      if (isDeleting) {
+        typedText.textContent = currentPhrase.substring(0, charIndex - 1);
+        charIndex--;
+        typeSpeed = 50;
+      } else {
+        typedText.textContent = currentPhrase.substring(0, charIndex + 1);
+        charIndex++;
+        typeSpeed = 100;
+      }
+
+      if (!isDeleting && charIndex === currentPhrase.length) {
+        isDeleting = true;
+        typeSpeed = 2000; // Pause at end
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        phraseIndex = (phraseIndex + 1) % phrases.length;
+        typeSpeed = 500;
+      }
+
+      setTimeout(type, typeSpeed);
     }
 
-    typePhrase();
-    setInterval(typePhrase, 4000);
+    type();
   }
 
 
